@@ -1,0 +1,37 @@
+{% extends 'weather/base.html' %}
+
+{% block content %}
+
+<br/>
+<section class="section" name='card-section'>
+        <div class="container">
+            <div class="row justify-content-start">
+
+                    <div class='col-6'>
+                    <div class="card mb-2" style='background-color: #C0C0C0;'>
+                        <div class='card-body'>
+                            <div class='container'>
+                            <div class="row align-items-start">
+                                <h2 class='card-title' style='margin-bottom: -2%;'>You searched for: '{{ searched }}'<h2>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {% for city in cities %}
+                    <div class="card mb-2" style=''>
+                        <div class='card-body'>
+                            <div class='container'>
+                            <div class="row align-items-start">
+                                <center><h2 class='card-title' style='margin-bottom: -2%;'><a href='{% url "info_city" city.id %}'>{{ city }}</a><h2></center>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+
+
+{% endblock content %}

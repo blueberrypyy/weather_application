@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What's the weather like?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+    
+
+<body style='background-image: linear-gradient(to right, blue, black); background-size: cover;'>
+
+    <nav style='background: rgba(0,0,0,0.2)' class="navbar mt-4 mx-5 navbar-dark navbar-expand-lg">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">Whats the weather like?</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search city" aria-label="Search">
+        <button class="btn btn-outline-info" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<br/>
+<br/>
+
+<!-- Current city weather data section -->
+<section class="section" name='card-section'>
+        <div class="container">
+            <div class="row justify-content-start">
+                    <div class='col-6'>
+                    <div class="card mb-4">
+                        <div class='card-body'>
+                            <div class='container'>
+                            <div class="row align-items-start">
+
+                                <div class='col-1' style='width: 16%;'>
+                                    <p class='text-muted' style='font-size: 12px;'>07:08 PM</p>
+                                <figure class="image is-50x50">
+                                    <img src="http://openweathermap.org/img/w/04n.png" alt="Image">
+                                </figure>
+                                </div>
+
+                                <div class="col mt-4">
+                                    <h1 class="card-title">Denver</h1>
+                                    <h2 class="card-text"><strong>31.59° f</strong></h2><br/>
+                                        <h5 class='card-subtitle mb-2 text-muted'> overcast clouds</h5>
+                                </div>
+
+                                <div class='col-6'>
+                                    <p>Feels like: 20.44°</p>
+                                    <hr/>
+                                    <p>Min: 27.07 Max: 35.26</p>
+                                    <hr/>
+                                    <p>Humidity: 62%</p>
+                                    <hr/>
+                                    <p>Wind: 16.78 MPH</p>
+                                    <hr/>
+                                    <p>and another</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+                    <!-- Hourly weather data section -->
+                    <div class='col-6'>
+
+                    
+                    <div class="card mb-4">
+                        <div class='card-body'>
+                        <div class='container'>
+                            <div class="row align-items-start">
+
+                                <div class='col-2 mt-4' style='width: 24%; margin-left: -4%;'>
+                                    <strong>03:00 AM</strong>
+                                </div>
+
+                                <div class='col-1 mt-2' style='width: 10%;'>
+                                    <img src="http://openweathermap.org/img/w/04n.png" alt="Image">
+                                </div>
+
+                                <div class='col-3 mt-3' style='width: 36%;'>
+                                    <h3><strong>31.57° f</strong></h3>
+                                    <p class='text-muted' style='margin-top: -8%;'>light snow
+                                </div>
+
+                                <div class='col-2 mt-3' style='width: 17%;'>
+                                    <p class='text-muted' style='margin-top: 9%; ;'>24%</p>
+                                </div>
+
+                                <div class='col-2 mt-3' style=''>
+                                    <p class='text-muted' style='margin-top: 9%; margin-left: 65%;'>24%</p>
+                                </div>
+
+                                <!--div class='col-3 mt-3' style=''>
+                                    <p>Feels like: 23.34</p>
+                                </div-->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card mb-4">
+                        <div class='card-body'>
+                        <div class='container'>
+                            <div class="row align-items-start">
+
+                                <div class='col-2 mt-4' style='width: 20%; margin-left: -4%;'>
+                                    <strong>06:00 AM</strong>
+                                </div>
+
+                                <div class='col-2 mt-2' style=''>
+                                    <img src="http://openweathermap.org/img/w/04n.png" alt="Image">
+                                </div>
+
+                                <div class='col-4 mt-3' style=''>
+                                    <h3><strong>31.84° f</strong></h3>
+                                    <p class='text-muted' style='margin-top: -8%;'>light snow
+                                </div>
+
+                                <div class='col-3 mt-3' style=''>
+                                    <p class='text-muted' style='margin-top: -8%;'>36%</p>
+                                </div>
+
+                                <!--div class='col-3 mt-3' style=''>
+                                    <p>Feels like: 24.3</p>
+                                </div-->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card mb-4">
+                        <div class='card-body'>
+                        <div class='container'>
+                            <div class="row align-items-start">
+
+                                <div class='col-2 mt-4' style='width: 20%; margin-left: -4%;'>
+                                    <strong>09:00 AM</strong>
+                                </div>
+
+                                <div class='col-2 mt-2' style=''>
+                                    <img src="http://openweathermap.org/img/w/04n.png" alt="Image">
+                                </div>
+
+                                <div class='col-4 mt-3' style=''>
+                                    <h3><strong>31.53° f</strong></h3>
+                                    <p class='text-muted' style='margin-top: -8%;'>broken clouds
+                                </div>
+
+                                <div class='col-3 mt-3' style=''>
+                                    <p class='text-muted' style='margin-top: -8%;'>4%</p>
+                                </div>
+
+                                <!--div class='col-3 mt-3' style=''>
+                                    <p>Feels like: 24.03</p>
+                                </div-->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card mb-4">
+                        <div class='card-body'>
+                        <div class='container'>
+                            <div class="row align-items-start">
+
+                                <div class='col-2 mt-4' style='width: 20%; margin-left: -4%;'>
+                                    <strong>12:00 PM</strong>
+                                </div>
+
+                                <div class='col-2 mt-2' style=''>
+                                    <img src="http://openweathermap.org/img/w/04n.png" alt="Image">
+                                </div>
+
+                                <div class='col-4 mt-3' style=''>
+                                    <h3><strong>30.07° f</strong></h3>
+                                    <p class='text-muted' style='margin-top: -8%;'>broken clouds
+                                </div>
+
+                                <div class='col-3 mt-3' style=''>
+                                    <p class='text-muted' style='margin-top: -8%;'>4%</p>
+                                </div>
+
+                                <!--div class='col-3 mt-3' style=''>
+                                    <p>Feels like: 25.21</p>
+                                </div-->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
