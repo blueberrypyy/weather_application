@@ -135,6 +135,7 @@ def info_city(request, city_id):
     #print('\nLAT:', city_geo[0]['lat'], 'LON:', city_geo[0]['lon'])
 
 
+    # Create full city list and assign variables to template context
     hourly_weather_list = []
     city_hourly = requests.get(hourly_url.format(lat, lon)).json()
     for item in city_hourly['list']:
