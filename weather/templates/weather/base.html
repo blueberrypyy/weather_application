@@ -10,9 +10,13 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 </head>
 
+<style>
+    body {background: #f4f4f4;}
+</style>
+
 {% include 'weather/navbar.html' %}
 
-<body style='background-image: linear-gradient(to right, blue, black)'>
+<!--body style='background-image: linear-gradient(to right, blue, black)'-->
 
 <div class='container'>
         {% if messages %}
@@ -27,7 +31,42 @@
         {% endfor %}
         {% endif %}
 
+</div>
     {% block content %}
 {% endblock content %}
 
 </body>
+
+<footer class='mt-5' style='background: #C0C0C0;'>
+
+    <div class='row w-100'>
+        <div class='col-4 p-5'>
+            <h2>Weather Appy</h2>
+        </div>
+
+        <div class='col-4 p-5'>
+            <p>Some info</p>
+            <p>Some info</p>
+            <p>Some info</p>
+            <p>Some info</p>
+            <p>Some info</p>
+        </div>
+
+        <div class='col-4 p-5'>
+            <p>Some info</p>
+            <p>Some info</p>
+            <p>Some info</p>
+            <p>Some info</p>
+            <p>Some info</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+
+</footer>
