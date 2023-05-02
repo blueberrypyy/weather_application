@@ -10,4 +10,5 @@ urlpatterns = [
         path('word_page/', views.word_view, name='word_page'),
         path('delete_word/<word_id>/', views.delete_word, name='delete_word'),
         path('about/', views.AboutPageView.as_view(), name='about'),
+        path('maps-example/', views.MapsPageView.as_view(), name='maps-example')
         ]

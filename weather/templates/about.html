@@ -28,14 +28,19 @@
       text-align: center;
     }
   </style>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv-MuTb7g-KALHN9aXD23DKDjvnYSlhFU">
 </script>
+<!--script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv-MuTb7g-KALHN9aXD23DKDjvnYSlhFU&callback=initMap">
+</script-->
+
+
 <script>
   var map;
   var geoJSON;
   var request;
   var gettingData = false;
-  var openWeatherMapKey = "ABC..."
+  var openWeatherMapKey = "faa30bca64456bb8655bdda8f22865c3"
 
   function initialize() {
     var mapOptions = {
@@ -175,9 +180,8 @@
 
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-</head>
 
-<div id="map-canvas"></div>
+<div style='width: 50%;' id="map-canvas"></div>
 
 
 {% endblock content %}

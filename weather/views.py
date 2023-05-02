@@ -12,6 +12,9 @@ from datetime import datetime as dt
 class AboutPageView(TemplateView): 
     template_name = 'about.html'
 
+class MapsPageView(TemplateView):
+    template_name = 'weather/maps_example.html'
+
    
 
 env = Env()
