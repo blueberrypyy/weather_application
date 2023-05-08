@@ -1,42 +1,4 @@
-{% extends 'weather/base.html' %}
-
-{% block content %}
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <h1>About</h1>
-
-<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <title>Weather layer</title>
-  <style>
-    html, body{
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    #map-canvas {
-      width: 80%;
-      height: 80%;
-    }
-    .gm-style-iw {
-      text-align: center;
-    }
-  </style>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv-MuTb7g-KALHN9aXD23DKDjvnYSlhFU">
-</script>
-<!--script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv-MuTb7g-KALHN9aXD23DKDjvnYSlhFU&callback=initMap">
-</script-->
-
-
-<script>
-  var map;
+var map;
   var geoJSON;
   var request;
   var gettingData = false;
@@ -179,14 +141,3 @@
   };
 
   google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-</head>
-
-<div id="map-canvas"></div>
-
-
-
-{% endblock content %}
-
-
-
