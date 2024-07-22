@@ -72,7 +72,7 @@ def delete_city(request, city_id):
 
 #city = 'New York'
 def index(request):
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=faa30bca64456bb8655bdda8f22865c3'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}'
     #print(cities)
     weather_data = []
     timestamp = timeStamp()
@@ -102,7 +102,7 @@ def index(request):
         form = CityForm()
 
         for city in cities:
-            city_weather = requests.get(url.format(city.name)).json() # request the API data and convert the JSON to Python data types
+            city_weather = requests.get(url.format(city.name, WEATHER_API_KEY)).json() # request the API data and convert the JSON to Python data types
 
             weather = {
                     'city': city,
@@ -125,13 +125,13 @@ def info_city(request, city_id):
     timestamp = timeStamp()
     print(timestamp)
 
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=faa30bca64456bb8655bdda8f22865c3'
-    geocode_url = 'http://api.openweathermap.org/geo/1.0/direct?q={}&limit=&appid=faa30bca64456bb8655bdda8f22865c3'
-    hourly_url = 'http://api.openweathermap.org/data/2.5/forecast?lat={0}&lon={1}&appid=faa30bca64456bb8655bdda8f22865c3&units=imperial'
-    #maps_url = 'https://tile.openweathermap.org/map/precipitation_new/3/2/5.png?appid=faa30bca64456bb8655bdda8f22865c3'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}'
+    geocode_url = 'http://api.openweathermap.org/geo/1.0/direct?q={}&limit=&appid={}'
+    hourly_url = 'http://api.openweathermap.org/data/2.5/forecast?lat={}&lon={}&appid={}&units=imperial'
+    #maps_url = 'https://tile.openweathermap.org/map/precipitation_new/3/2/5.png?appid={}'
 
     # Determine lat/lon for hourly url 
-    city_geo = requests.get(geocode_url.format(city.name)).json()
+    city_geo = requests.get(geocode_url.format(city.name, WEATHER_API_KEY)).json()
     lat = city_geo[0]['lat']
     lon = city_geo[0]['lon']
     #print('\nCITY GEO: ', city_geo, '\n')
@@ -140,7 +140,7 @@ def info_city(request, city_id):
 
     # Create full city list and assign variables to template context
     hourly_weather_list = []
-    city_hourly = requests.get(hourly_url.format(lat, lon)).json()
+    city_hourly = requests.get(hourly_url.format(lat, lon, WEATHER_API_KEY)).json()
     for item in city_hourly['list']:
         #print('\n', item)
         hourly_weather_data = {
@@ -166,7 +166,7 @@ def info_city(request, city_id):
         #hourly_weather_time = time_converter(item['dt_text'].split()[1])
         #print('CITY HOURLY: ', city_hourly)
             
-    city_weather = requests.get(url.format(city.name)).json() # request the API data and convert the JSON to Python data types
+    city_weather = requests.get(url.format(city.name, WEATHER_API_KEY)).json() # request the API data and convert the JSON to Python data types
     #print('CITY_WEATHER:', city_weather)
 
     #city_weather_map = requests.get(maps_url)
@@ -201,7 +201,7 @@ def info_city(request, city_id):
 
 
 #DEBUG
-#url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=faa30bca64456bb8655bdda8f22865c3'
+#url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid={}'
 #city = 'Denver'
 #city_weather = requests.get(url.format(city)).json() # request the API data and convert the JSON to Python data types
 #print(city_weather)
