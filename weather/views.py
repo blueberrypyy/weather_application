@@ -103,12 +103,17 @@ def index(request):
 
         for city in cities:
             city_weather = requests.get(url.format(city.name, WEATHER_API_KEY)).json() # request the API data and convert the JSON to Python data types
+            print('COD:', city_weather['cod'])
+            if city_weather['cod'] != 200:
+                continue
+            print(city_weather, '\n\n')
 
             weather = {
                     'city': city,
                     'temperature': city_weather['main']['temp'],
                     'description': city_weather['weather'][0]['description'],
                     'icon': city_weather['weather'][0]['icon'],
+                    'cod': city_weather['cod']
                     }
             weather_data.append(weather) # add the data of the current city to our list
 
