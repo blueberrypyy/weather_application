@@ -53,7 +53,6 @@
                                     <h2 class="card-title">{{ weather.city }}</h2>
                                         <h5 class="card-text">{{ weather.temperature }}</h5>
                                         <p class='card-subtitle mb-2 text-muted'> {{ weather.description }}</p>
-                                        <p class='card-subtitle mb-2 text-muted'>'cod': {{ weather.cod }}</p>
                                 </div>
                                     <a href='{% url "delete_city" weather.city.id %}' class='btn btn-close ml-2' ></a>
                                     <a href='{% url "info_city" weather.city.id %}' class='btn btn-outline-info mt-3'>More info</a>
