@@ -23,7 +23,7 @@ body {
 
 </style>
 
-<script>
+<!--script>
 /*
  * This demo illustrates the coordinate system used to display map tiles in the
  * API.
@@ -91,7 +91,23 @@ function initMap() {
 window.initMap = initMap;
 
 
-    </script>
+    </script-->
+
+<script>
+
+    function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 40.76, lng: -73.983 },
+    zoom: 15,
+    mapTypeId: "satellite",
+  });
+
+  map.setTilt(45);
+}
+
+window.initMap = initMap;
+
+</script>
 
     <html>
   <head>
