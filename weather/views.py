@@ -9,17 +9,19 @@ from .forms import CityForm
 import time as t
 from datetime import datetime as dt 
 
-class AboutPageView(TemplateView): 
-    template_name = 'about.html'
-
-class MapsPageView(TemplateView):
-    template_name = 'weather/maps_example.html'
-
-   
-
 env = Env()
 env.read_env()
 WEATHER_API_KEY = env.str('WEATHER_API_KEY')
+
+class AboutPageView(TemplateView): 
+    template_name = 'about.html'
+    def get_context_data(self,*args, **kwargs):
+        context = {'WEATHER_API_KEY': WEATHER_API_KEY} 
+        return context
+
+class MapsPageView(TemplateView):
+    template_name = 'weather/maps_example.html'
+   
 
 # Date and month function
 def dateStamp():
